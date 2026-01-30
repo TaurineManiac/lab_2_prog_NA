@@ -26,3 +26,89 @@ java.io.FileNotFoundException: data.bin (The system cannot find the file specifi
 2026-01-29 12:43:00.258 [main] INFO  Main - Exiting.
 2026-01-29 12:43:03.810 [main] INFO  Main - IT Management System started.
 2026-01-29 12:43:10.650 [main] INFO  EmployeeManager - Database loaded from data.bin
+2026-01-29 13:36:44.573 [main] INFO  Main - IT Management System started.
+2026-01-29 13:40:21.800 [main] INFO  Main - IT Management System started.
+2026-01-29 13:41:06.026 [main] INFO  EmployeeManager - Database loaded from data.bin
+2026-01-29 13:41:49.283 [main] INFO  EmployeeManager - Employee added: lol (ID: 1)
+2026-01-29 13:42:06.972 [main] INFO  EmployeeManager - Database saved to data.bin
+2026-01-29 13:42:11.325 [main] INFO  EmployeeManager - Database loaded from data.bin
+2026-01-29 13:44:04.121 [main] ERROR InputUtils - Invalid number input attempt.
+2026-01-29 13:46:39.179 [main] INFO  Main - IT Management System started.
+2026-01-29 13:46:49.068 [main] INFO  EmployeeManager - Database loaded from data.bin
+2026-01-29 13:48:42.328 [main] INFO  Main - IT Management System started.
+2026-01-29 13:49:10.697 [main] INFO  Main - IT Management System started.
+2026-01-29 13:49:32.932 [main] ERROR InputUtils - Invalid number input attempt.
+2026-01-29 13:50:07.273 [main] INFO  Main - IT Management System started.
+2026-01-29 13:50:13.810 [main] ERROR InputUtils - Invalid number input attempt.
+2026-01-29 13:51:27.358 [main] INFO  Main - IT Management System started.
+2026-01-29 13:51:55.736 [main] INFO  EmployeeManager - Database loaded from data.bin
+2026-01-29 22:19:51.679 [main] INFO  Main - IT Management System started.
+2026-01-29 22:20:42.905 [main] INFO  EmployeeManager - Database loaded from data.bin
+2026-01-29 22:22:16.689 [main] INFO  Main - IT Management System started.
+2026-01-29 22:22:24.322 [main] INFO  EmployeeManager - Database loaded from data.bin
+2026-01-29 22:23:17.347 [main] INFO  EmployeeManager - Employee added: zzz (ID: 9)
+2026-01-29 22:24:12.874 [main] INFO  EmployeeManager - Employee added: sdf (ID: 3)
+2026-01-29 23:24:28.064 [main] INFO  Main - System started.
+2026-01-29 23:34:27.833 [main] INFO  Main - System started.
+2026-01-29 23:37:27.840 [main] INFO  Main - System started.
+2026-01-29 23:37:35.037 [main] ERROR EmployeeManager - Load error
+java.io.InvalidClassException: org.example.model.Employee; local class incompatible: stream classdesc serialVersionUID = 1, local class serialVersionUID = 1466005131743430202
+	at java.base/java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:612) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:2077) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1920) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:2077) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1920) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2251) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1755) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:533) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:491) ~[?:?]
+	at java.base/java.util.ArrayList.readObject(ArrayList.java:982) ~[?:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at java.base/java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1145) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2463) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2303) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1755) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:533) ~[?:?]
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:491) ~[?:?]
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:93) [main/:?]
+	at org.example.Main.main(Main.java:30) [main/:?]
+2026-01-29 23:38:24.171 [main] INFO  Main - System started.
+2026-01-29 23:38:28.008 [main] ERROR EmployeeManager - Load error
+java.io.FileNotFoundException: data.bin (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:215) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:153) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:92) [main/:?]
+	at org.example.Main.main(Main.java:30) [main/:?]
+2026-01-29 23:39:15.646 [main] INFO  EmployeeManager - Employee added: sosa (Role: Developer)
+2026-01-29 23:41:08.350 [main] INFO  Main - System started.
+2026-01-29 23:41:14.045 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-29 23:41:35.011 [main] INFO  EmployeeManager - Employee added: sosa (Role: Developer)
+2026-01-29 23:41:38.850 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-29 23:41:44.112 [main] INFO  Main - Exiting...
+2026-01-29 23:41:47.267 [main] INFO  Main - System started.
+2026-01-29 23:41:52.079 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-01-29 23:43:18.760 [main] INFO  Main - System started.
+2026-01-29 23:43:24.271 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-01-29 23:44:19.025 [main] WARN  InputUtils - User provided empty string input.
+2026-01-29 23:44:21.609 [main] INFO  EmployeeManager - Employee added: zuza (Role: Tester)
+2026-01-29 23:44:37.163 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-29 23:46:31.400 [main] INFO  Main - System started.
+2026-01-29 23:46:53.025 [main] INFO  Main - System started.
+2026-01-29 23:47:53.960 [main] ERROR InputUtils - Invalid number input attempt.
+2026-01-29 23:48:05.677 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-01-30 12:12:32.328 [main] INFO  Main - System started.
+2026-01-30 12:13:22.690 [main] INFO  EmployeeManager - Employee added: dev (Role: Developer)
+2026-01-30 12:14:24.146 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-01-30 12:14:56.785 [main] INFO  EmployeeManager - Employee added: sf (Role: Developer)
+2026-01-30 12:15:03.257 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-30 12:19:23.057 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-30 12:24:58.585 [main] INFO  Main - System started.
+2026-01-30 12:25:09.845 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-01-30 12:27:20.130 [main] INFO  Main - System started.
+2026-01-30 12:27:30.551 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-01-30 12:28:03.654 [main] ERROR InputUtils - Invalid number input attempt.
+2026-01-30 12:28:11.718 [main] INFO  EmployeeManager - Employee added: wer (Role: Developer)
+2026-01-30 12:28:33.062 [main] INFO  EmployeeManager - Data saved to data.bin

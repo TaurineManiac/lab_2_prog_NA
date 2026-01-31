@@ -112,3 +112,79 @@ java.io.FileNotFoundException: data.bin (The system cannot find the file specifi
 2026-01-30 12:28:03.654 [main] ERROR InputUtils - Invalid number input attempt.
 2026-01-30 12:28:11.718 [main] INFO  EmployeeManager - Employee added: wer (Role: Developer)
 2026-01-30 12:28:33.062 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-30 18:11:58.411 [main] INFO  Main - System started.
+2026-01-30 18:12:16.097 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-01-30 19:50:13.562 [main] INFO  Main - System started.
+2026-01-30 19:50:25.774 [main] ERROR EmployeeManager - Load error
+java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class java.util.HashMap (java.util.ArrayList and java.util.HashMap are in module java.base of loader 'bootstrap')
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:127) [main/:?]
+	at org.example.Main.main(Main.java:30) [main/:?]
+2026-01-30 19:50:53.405 [main] INFO  Main - System started.
+2026-01-30 19:51:17.850 [main] INFO  EmployeeManager - Employee added: firsty (Role: Manager)
+2026-01-30 19:52:55.218 [main] INFO  Main - System started.
+2026-01-30 19:52:59.612 [main] ERROR EmployeeManager - Load error
+java.io.FileNotFoundException: data.bin (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:215) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:153) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:126) [main/:?]
+	at org.example.Main.main(Main.java:30) [main/:?]
+2026-01-30 19:53:06.352 [main] INFO  Main - System started.
+2026-01-30 19:53:26.165 [main] ERROR InputUtils - Invalid number input attempt.
+2026-01-30 19:53:31.456 [main] INFO  EmployeeManager - Employee added: ашкыен (Role: Manager)
+2026-01-30 19:53:37.764 [main] INFO  Main - System started.
+2026-01-30 19:54:11.263 [main] INFO  EmployeeManager - Employee added: firsty (Role: Developer)
+2026-01-30 19:54:14.732 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-30 20:02:34.895 [main] ERROR InputUtils - Invalid number input attempt.
+2026-01-30 20:02:39.442 [main] ERROR InputUtils - Invalid number input attempt.
+2026-01-30 20:02:52.045 [main] ERROR InputUtils - Invalid number input attempt.
+2026-01-30 20:02:53.546 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-30 20:03:02.049 [main] INFO  Main - Exiting...
+2026-01-30 20:03:04.482 [main] INFO  Main - System started.
+2026-01-30 20:03:15.092 [main] ERROR EmployeeManager - Load error
+java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class java.util.HashMap (java.util.ArrayList and java.util.HashMap are in module java.base of loader 'bootstrap')
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:127) [main/:?]
+	at org.example.Main.main(Main.java:30) [main/:?]
+2026-01-30 20:05:21.606 [main] INFO  Main - System started.
+2026-01-30 20:05:26.319 [main] ERROR EmployeeManager - Load error
+java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class java.util.HashMap (java.util.ArrayList and java.util.HashMap are in module java.base of loader 'bootstrap')
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:127) [main/:?]
+	at org.example.Main.main(Main.java:30) [main/:?]
+2026-01-30 20:06:08.404 [main] INFO  Main - System started.
+2026-01-30 20:06:13.897 [main] ERROR InputUtils - Invalid number input attempt.
+2026-01-30 20:06:32.893 [main] INFO  EmployeeManager - Employee added: name (Role: Developer)
+2026-01-30 20:06:35.853 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-30 20:06:41.114 [main] INFO  Main - System started.
+2026-01-30 20:06:45.355 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-01-30 20:57:04.864 [main] INFO  Main - System started.
+2026-01-30 20:57:20.746 [main] INFO  EmployeeManager - Employee added: 2 (Role: Developer)
+2026-01-30 20:57:35.484 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-30 20:57:37.956 [main] ERROR EmployeeManager - Load error
+java.lang.ClassCastException: class java.util.LinkedList cannot be cast to class java.util.ArrayList (java.util.LinkedList and java.util.ArrayList are in module java.base of loader 'bootstrap')
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:147) [main/:?]
+	at org.example.Main.main(Main.java:30) [main/:?]
+2026-01-30 20:57:49.933 [main] INFO  Main - System started.
+2026-01-30 20:57:54.753 [main] ERROR EmployeeManager - Load error
+java.lang.ClassCastException: class java.util.LinkedList cannot be cast to class java.util.ArrayList (java.util.LinkedList and java.util.ArrayList are in module java.base of loader 'bootstrap')
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:147) [main/:?]
+	at org.example.Main.main(Main.java:30) [main/:?]
+2026-01-30 20:59:13.808 [main] INFO  Main - System started.
+2026-01-30 20:59:30.091 [main] INFO  Main - System started.
+2026-01-30 20:59:38.265 [main] INFO  EmployeeManager - Employee added: 1 (Role: Developer)
+2026-01-30 20:59:47.612 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-30 20:59:49.086 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-01-31 13:25:57.960 [main] INFO  Main - System started.
+2026-01-31 13:26:44.425 [main] WARN  EmployeeManager - No employees found.
+2026-01-31 13:26:53.306 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-01-31 13:27:02.915 [main] INFO  Main - Exiting...
+2026-01-31 13:27:05.473 [main] INFO  Main - System started.
+2026-01-31 13:27:15.383 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-31 13:27:22.976 [main] WARN  InputUtils - User provided empty string input.
+2026-01-31 13:27:29.145 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-01-31 13:28:02.603 [main] INFO  EmployeeManager - Employee added: firsty (Role: Tester)
+2026-01-31 13:28:44.337 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-31 13:29:31.327 [main] INFO  EmployeeManager - Employee added: zuza (Role: Tester)
+2026-01-31 13:29:53.751 [main] INFO  EmployeeManager - Employee added: sosa (Role: Tester)
+2026-01-31 13:29:58.415 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-01-31 13:30:23.690 [main] INFO  EmployeeManager - Employee added: sasha (Role: Manager)

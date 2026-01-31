@@ -30,4 +30,17 @@ public class InputUtils {
             }
         }
     }
+
+    public static int readOneInt(String prompt) {
+        while (true) {
+            System.out.print(prompt);
+            try {
+                int value = Integer.parseInt(scanner.nextLine());
+                return value;
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Invalid number format!");
+                log.error("Invalid number input attempt.");
+            }
+        }
+    }
 }

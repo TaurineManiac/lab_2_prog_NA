@@ -18,21 +18,21 @@ public class Main {
 
         while (true) {
             printMainMenu();
-            int choice = InputUtils.readInt("Select option: ", 0, 11);
+            int choice = InputUtils.readInt("Select option: ", 0, 12);
 
             switch (choice) {
                 case 1 -> addFlow();
                 case 2 -> manager.getAll().forEach(System.out::println);
                 case 3 -> menuController.showSearchMenu();
                 case 4 -> menuController.showSortMenu();
-                case 5 -> manager.printStatistics();
+                case 5 -> menuController.showStatisticMenu();
                 case 6 -> handleAdminAction();
                 case 7 -> manager.loadFromFile("data.bin");
                 case 8 -> login();
-
                 case 9 -> manager.saveToFile("data.bin");
                 case 10 -> deleteFlow();
                 case 11 -> menuController.showFilterMenu();
+                case 12 -> manager.printTransfers();
                 case 0 -> {
                     log.info("Exiting...");
                     System.exit(0);
@@ -62,7 +62,7 @@ public class Main {
         System.out.println("5. Statistics        | 6. Edit Project (Admin)");
         System.out.println("7. Load Data         | 8. Login Admin");
         System.out.println("9. Save Data         | 10. Delete Employee (Admin)");
-        System.out.println("11. Filter");
+        System.out.println("11. Filter           | 12. Print history of transfer");
         System.out.println("0. Exit");
         if (isAdmin) System.out.println(">>> LOGGED AS ADMIN <<<");
     }
@@ -101,7 +101,7 @@ public class Main {
             String stack = InputUtils.readString("Tech Stack: ");
             manager.addEmployee(new Developer(id, name, exp, proj, stack));
         } else if (type == 2) {
-            String testType = InputUtils.readString("Test Type (Manual/Auto): ");
+            String testType = InputUtils.readString("Test Type : ");
             manager.addEmployee(new Tester(id, name, exp, proj, testType));
         } else {
             int teamSize = InputUtils.readInt("Team Size: ", 1, 100);

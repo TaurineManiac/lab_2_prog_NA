@@ -92,6 +92,11 @@ public class Main {
         System.out.println("\n--- Adding New Employee ---");
         int type = InputUtils.readInt("1. Developer | 2. Tester | 3. Manager: ", 1, 3);
         String id = InputUtils.readString("ID: ");
+        boolean exists = manager.getAll().stream().anyMatch(employee -> employee.getId().equals(id));
+        if  (exists) {
+            log.warn("Employee with ID " + id + " already exists.");
+            return;
+        }
         String name = InputUtils.readString("Name: ");
         int exp = InputUtils.readInt("Experience (years): ", 0, 50);
         String proj = InputUtils.readString("Project: ");

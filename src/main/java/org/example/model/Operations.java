@@ -1,0 +1,17 @@
+package org.example.model;
+
+public enum Operations {
+    ADD_EMPLOYEE,
+    GET_ALL,
+    SEARCH_EMPLOYEE,
+    SORT_EMPLOYEE,
+    GET_STATISTICS,
+    EDIT_EMPLOYEE,
+    LOAD_DATA,
+    LOGIN_AS_ADMIN,
+    SAVE_DATA,
+    DELETE_EMPLOYEE,
+    FILTER_EMPLOYEE,
+    GET_HISTORY_OF_TRANSFER,
+    EXIT
+}

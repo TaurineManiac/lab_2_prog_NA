@@ -1,9 +1,21 @@
 package org.example.model;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type"
+)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Developer.class, name = "Developer"),
+        @JsonSubTypes.Type(value = Tester.class, name = "Tester"),
+        @JsonSubTypes.Type(value = Manager.class, name = "Manager")
+})
 public abstract class Employee implements Payable, ProjectAssignable, java.io.Serializable {
     private String id;
     private String name;

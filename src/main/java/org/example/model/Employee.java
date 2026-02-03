@@ -1,15 +1,20 @@
 package org.example.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         include = JsonTypeInfo.As.PROPERTY,
-        property = "type"
+        property = "type",
+        visible = true
+
 )
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Developer.class, name = "Developer"),
@@ -23,6 +28,7 @@ public abstract class Employee implements Payable, ProjectAssignable, java.io.Se
     private String currentProject;
     protected double salary;
 
+    @JsonIgnore
     public abstract String getRole();
 
     @Override

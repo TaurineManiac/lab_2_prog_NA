@@ -1,10 +1,13 @@
 package org.example.model;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import lombok.*;
 
+@NoArgsConstructor
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
+@JsonTypeName("Developer")
 public class Developer extends Employee {
     private String techStack;
 

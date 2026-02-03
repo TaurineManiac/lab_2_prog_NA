@@ -188,3 +188,247 @@ java.lang.ClassCastException: class java.util.LinkedList cannot be cast to class
 2026-01-31 13:29:53.751 [main] INFO  EmployeeManager - Employee added: sosa (Role: Tester)
 2026-01-31 13:29:58.415 [main] INFO  EmployeeManager - Data saved to data.bin
 2026-01-31 13:30:23.690 [main] INFO  EmployeeManager - Employee added: sasha (Role: Manager)
+2026-02-02 15:19:40.650 [main] INFO  Main - Server is starting...
+2026-02-02 15:21:08.255 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:21:33.883 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:21:33.914 [main] ERROR Main - Request processing error: 
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `org.example.model.Developer` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (String)"{"type":"Developer","id":"1","name":"name","experience":5,"currentProject":"pet","salary":2750.0,"techStack":"java","role":"Developer"}"; line: 1, column: 21]
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:67) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:1915) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:414) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1360) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1424) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:352) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:220) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:170) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:136) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:263) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3740) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at org.example.Main.handleRequest(Main.java:68) [main/:?]
+	at org.example.Main.main(Main.java:38) [main/:?]
+2026-02-02 15:25:33.473 [main] INFO  Main - Server is starting...
+2026-02-02 15:26:19.317 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:26:19.323 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:27:25.141 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:27:25.141 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:27:25.186 [main] ERROR Main - Request processing error: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "role" (class org.example.model.Developer), not marked as ignorable (6 known properties: "currentProject", "techStack", "experience", "id", "name", "salary"])
+ at [Source: (String)"{"type":"Developer","id":"1","name":"denis","experience":5,"currentProject":"pet","salary":2750.0,"techStack":"java","role":"Developer"}"; line: 1, column: 126] (through reference chain: org.example.model.Developer["role"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:215) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:170) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:136) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:263) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3740) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at org.example.Main.handleRequest(Main.java:69) [main/:?]
+	at org.example.Main.main(Main.java:39) [main/:?]
+2026-02-02 15:29:20.587 [main] INFO  Main - Server is starting...
+2026-02-02 15:29:56.383 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:29:56.401 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:29:56.446 [main] INFO  EmployeeManager - Employee added: name (Role: Developer)
+2026-02-02 15:30:02.285 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:30:02.285 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:31:01.485 [main] INFO  Main - Server is starting...
+2026-02-02 15:32:18.134 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:32:18.149 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:32:18.197 [main] INFO  EmployeeManager - Employee added: name (Role: Developer)
+2026-02-02 15:32:20.472 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:32:20.472 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:36:59.446 [main] INFO  Main - Server is starting...
+2026-02-02 15:37:27.018 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:37:27.024 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:37:27.071 [main] ERROR Main - Request processing error: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "type" (class org.example.model.Developer), not marked as ignorable (6 known properties: "currentProject", "techStack", "experience", "id", "name", "salary"])
+ at [Source: (String)"{"type":"Developer","id":"1","name":"name","experience":5,"currentProject":"pet","salary":2750.0,"techStack":"java"}"; line: 1, column: 20] (through reference chain: org.example.model.Developer["type"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:215) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:170) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:136) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:263) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3740) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at org.example.Main.handleRequest(Main.java:69) [main/:?]
+	at org.example.Main.main(Main.java:39) [main/:?]
+2026-02-02 15:39:42.683 [main] INFO  Main - Server is starting...
+2026-02-02 15:40:04.759 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:40:04.777 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:40:04.828 [main] INFO  EmployeeManager - Employee added: name (Role: Developer)
+2026-02-02 15:40:08.008 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:40:08.008 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:41:35.382 [main] INFO  Main - Server is starting...
+2026-02-02 15:41:57.315 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:41:57.331 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:41:57.379 [main] INFO  EmployeeManager - Employee added: zuza (Role: Developer)
+2026-02-02 15:41:59.588 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:41:59.588 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:42:20.820 [main] INFO  Main - Server is starting...
+2026-02-02 15:42:27.734 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:42:27.741 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:42:45.673 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:42:45.685 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:42:45.715 [main] INFO  EmployeeManager - Employee added: zaza (Role: Developer)
+2026-02-02 15:42:47.280 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:42:47.280 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:44:37.191 [main] INFO  Main - Server is starting...
+2026-02-02 15:44:53.898 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:44:53.915 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:44:53.969 [main] INFO  EmployeeManager - Employee added: zaza (Role: Developer)
+2026-02-02 15:44:55.243 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:44:55.243 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:45:40.315 [main] INFO  Main - Server is starting...
+2026-02-02 15:45:54.667 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:45:54.681 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:45:54.726 [main] ERROR Main - Request processing error: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "type" (class org.example.model.Developer), not marked as ignorable (6 known properties: "currentProject", "techStack", "experience", "id", "name", "salary"])
+ at [Source: (String)"{"type":"Developer","id":"1","name":"qw","experience":1,"currentProject":"qw","salary":2150.0,"techStack":"qw"}"; line: 1, column: 20] (through reference chain: org.example.model.Developer["type"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:215) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:170) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:136) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:263) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3740) ~[jackson-databind-2.15.2.jar:2.15.2]
+	at org.example.Main.handleRequest(Main.java:69) [main/:?]
+	at org.example.Main.main(Main.java:39) [main/:?]
+2026-02-02 15:49:54.451 [main] INFO  Main - Server is starting...
+2026-02-02 15:50:01.452 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:50:01.473 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:50:14.490 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:50:14.490 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:50:14.537 [main] INFO  EmployeeManager - Employee added: qw (Role: Developer)
+2026-02-02 15:50:16.398 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:50:16.398 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:52:39.751 [main] INFO  Main - Server is starting...
+2026-02-02 15:52:49.463 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:52:49.471 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:52:58.601 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:52:58.601 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:52:58.657 [main] INFO  EmployeeManager - Employee added: 1 (Role: Developer)
+2026-02-02 15:53:00.933 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:53:00.948 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 15:57:24.255 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:57:24.273 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 15:57:24.273 [main] INFO  EmployeeManager - Employee added: 1 (Role: Developer)
+2026-02-02 15:57:26.255 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 15:57:26.271 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:00:50.324 [main] INFO  Main - Server is starting...
+2026-02-02 16:01:12.679 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:01:12.695 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 16:01:12.742 [main] INFO  EmployeeManager - Employee added: 1 (Role: Developer)
+2026-02-02 16:01:21.814 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:01:21.814 [main] INFO  Main - Processing operation: SAVE_DATA
+2026-02-02 16:01:21.832 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-02-02 16:01:39.133 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:01:39.144 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:07:07.398 [main] INFO  Main - Server is starting...
+2026-02-02 16:07:15.145 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:07:15.157 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:07:34.071 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:07:34.081 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 16:07:34.129 [main] INFO  EmployeeManager - Employee added: 1 (Role: Developer)
+2026-02-02 16:07:36.135 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:07:36.135 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:10:54.720 [main] INFO  Main - Server is starting...
+2026-02-02 16:11:00.770 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:11:00.778 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:11:51.190 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:11:51.199 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:11:57.479 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:11:57.483 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 16:11:57.524 [main] INFO  EmployeeManager - Employee added: 1 (Role: Developer)
+2026-02-02 16:11:58.697 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:11:58.697 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:15:40.933 [main] INFO  Main - Server is starting...
+2026-02-02 16:15:46.694 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:15:46.703 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:15:52.091 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:15:52.091 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 16:15:52.126 [main] INFO  EmployeeManager - Employee added: 1 (Role: Developer)
+2026-02-02 16:15:53.033 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:15:53.033 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:23:19.879 [main] INFO  Main - Server is starting...
+2026-02-02 16:23:31.265 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:23:31.280 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:23:37.144 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:23:37.147 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 16:23:37.195 [main] INFO  EmployeeManager - Employee added: 1 (Role: Developer)
+2026-02-02 16:23:38.348 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:23:38.348 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:26:49.053 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:26:49.053 [main] INFO  Main - Processing operation: SEARCH_BY_NAME
+2026-02-02 16:33:35.169 [main] INFO  Main - Server is starting...
+2026-02-02 16:34:15.201 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:34:15.208 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:34:20.382 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:34:20.382 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 16:34:20.414 [main] INFO  EmployeeManager - Employee added: 1 (Role: Developer)
+2026-02-02 16:34:21.229 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:34:21.229 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 16:35:34.129 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 16:35:34.129 [main] INFO  Main - Processing operation: SEARCH_BY_NAME
+2026-02-02 22:09:10.127 [main] INFO  Main - Server is starting...
+2026-02-02 22:09:10.181 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-02 22:09:10.181 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-02 22:09:10.187 [main] INFO  Main - Server is listening on port 6666
+2026-02-02 22:09:22.383 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 22:09:22.400 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 22:09:45.845 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 22:09:45.847 [main] INFO  Main - Processing operation: ADD_EMPLOYEE
+2026-02-02 22:09:45.872 [main] INFO  EmployeeManager - Employee added: alex (Role: Developer)
+2026-02-02 22:09:49.061 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 22:09:49.062 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 22:10:11.571 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 22:10:11.572 [main] INFO  Main - Processing operation: EDIT_EMPLOYEE
+2026-02-02 22:14:11.529 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 22:14:11.530 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 22:17:42.446 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 22:17:42.448 [main] INFO  Main - Processing operation: SAVE_DATA
+2026-02-02 22:17:42.449 [main] INFO  EmployeeManager - Data saved to data.bin
+2026-02-02 22:17:45.740 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 22:17:45.741 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-02 22:17:57.928 [main] INFO  Main - Server is starting...
+2026-02-02 22:17:57.978 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-02 22:17:57.979 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-02 22:17:57.985 [main] INFO  Main - Server is listening on port 6666
+2026-02-02 22:18:31.614 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 22:18:31.617 [main] INFO  Main - Processing operation: GET_STATISTICS
+2026-02-02 22:18:44.525 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 22:18:44.526 [main] INFO  Main - Processing operation: GET_TOP_SALARY
+2026-02-02 22:18:52.469 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 22:18:52.470 [main] INFO  Main - Processing operation: GET_TOP_EXP
+2026-02-02 22:19:00.180 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-02 22:19:00.181 [main] INFO  Main - Processing operation: GET_HISTORY_TRANSFER

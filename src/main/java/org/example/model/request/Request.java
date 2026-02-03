@@ -1,8 +1,6 @@
 package org.example.model.request;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.example.model.Operations;
 
 import java.io.Serializable;
@@ -11,8 +9,16 @@ import java.io.Serializable;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class Request implements Serializable {
     private static final long serialVersionUID = 1L;
     Operations operations;
     String data;
+    String password;
+
+    public Request(Operations operations, String data) {
+        this.operations = operations;
+        this.data = data;
+    }
 }

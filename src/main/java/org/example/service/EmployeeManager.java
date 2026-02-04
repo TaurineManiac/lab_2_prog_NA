@@ -1,5 +1,6 @@
 package org.example.service;
 
+import lombok.RequiredArgsConstructor;
 import org.example.model.*;
 import lombok.extern.log4j.Log4j2;
 import java.io.*;
@@ -9,36 +10,38 @@ import java.util.stream.Collectors;
 import static java.lang.Integer.parseInt;
 
 @Log4j2
+@RequiredArgsConstructor
 public class EmployeeManager {
     private List<Employee> employees = new ArrayList<>();
     private HashMap<Integer, Double> salaryMap = new HashMap<>();
     private HashMap<Integer, String> projectMap = new HashMap<>();
     private List<String> transfersBetweenProjects = new LinkedList<>();
+    private final String DATA_FILE = "data.bin";
 
-    public void addEmployee(Employee e) {
+    public synchronized void addEmployee(Employee e) {
         employees.add(e);
         salaryMap.put(parseInt(e.getId()), e.getSalary());
         projectMap.put(parseInt(e.getId()), e.getCurrentProject());
         log.info("Employee added: {} (Role: {})", e.getName(), e.getRole());
     }
 
-    public List<Employee> getAll() { return new ArrayList<>(employees); }
+    public synchronized List<Employee> getAll() { return new ArrayList<>(employees); }
 
 
-    public List<Employee> searchByName(String name) {
+    public synchronized List<Employee> searchByName(String name) {
         return employees.stream()
                 .filter(e -> e.getName().toLowerCase().contains(name.toLowerCase()))
                 .toList();
     }
 
-    public List<Employee> searchBySkills(String skill) {
+    public synchronized List<Employee> searchBySkills(String skill) {
         return employees.stream()
                 .filter(e -> e instanceof Developer)
                 .filter(e -> ((Developer) e).getTechStack().toLowerCase().contains(skill.toLowerCase()))
                 .toList();
     }
 
-    public String getStatisticsAsString() {
+    public synchronized String getStatisticsAsString() {
         if (employees.isEmpty()) return "No employees found.";
 
         StringBuilder sb = new StringBuilder("\n--- IT Company Statistics ---\n");
@@ -53,7 +56,7 @@ public class EmployeeManager {
         return sb.toString();
     }
 
-    public String getTopThreePerSalaryAsString() {
+    public synchronized String getTopThreePerSalaryAsString() {
         if (employees.isEmpty()) return "No employees found.";
 
         StringBuilder sb = new StringBuilder("\n--- Top 3 Salary ---\n");
@@ -64,7 +67,7 @@ public class EmployeeManager {
         return sb.toString();
     }
 
-    public String getTopThreePerExperienceAsString() {
+    public synchronized String getTopThreePerExperienceAsString() {
         if (employees.isEmpty()) return "No employees found.";
 
         StringBuilder sb = new StringBuilder("\n--- Top 3 Experience ---\n");
@@ -75,17 +78,17 @@ public class EmployeeManager {
         return sb.toString();
     }
 
-    public String getSalaryByIdAsString(int id) {
+    public synchronized String getSalaryByIdAsString(int id) {
         Double salary = salaryMap.get(id);
         return (salary == null) ? "Employee not found." : "Salary: " + salary + "$";
     }
 
-    public String getTransfersAsString() {
+    public synchronized String getTransfersAsString() {
         if (transfersBetweenProjects.isEmpty()) return "No transfers yet.";
         return "\n--- Project Transfer History ---\n" + String.join("\n", transfersBetweenProjects);
     }
 
-    public boolean removeEmployee(String id) {
+    public synchronized boolean removeEmployee(String id) {
         boolean removed = employees.removeIf(e -> e.getId().equals(id));
         if (removed) {
             salaryMap.remove(parseInt(id));
@@ -94,7 +97,7 @@ public class EmployeeManager {
         return removed;
     }
 
-    public boolean editProject(String id, String newProject) {
+    public synchronized boolean editProject(String id, String newProject) {
         return employees.stream()
                 .filter(e -> e.getId().equals(id))
                 .findFirst()
@@ -107,24 +110,24 @@ public class EmployeeManager {
                 .orElse(false);
     }
 
-    public void saveToFile(String path) throws IOException {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(path))) {
+    public void saveToFile() throws IOException {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(DATA_FILE))) {
             oos.writeObject(projectMap);
             oos.writeObject(salaryMap);
             oos.writeObject(employees);
             oos.writeObject(transfersBetweenProjects);
-            log.info("Data saved to {}", path);
+            log.info("Data saved to {}", DATA_FILE);
         }
     }
 
     @SuppressWarnings("unchecked")
-    public void loadFromFile(String path) throws Exception {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path))) {
+    public void loadFromFile() throws Exception {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(DATA_FILE))) {
             projectMap = (HashMap<Integer, String>) ois.readObject();
             salaryMap = (HashMap<Integer, Double>) ois.readObject();
             employees = (List<Employee>) ois.readObject();
             transfersBetweenProjects = (LinkedList<String>) ois.readObject();
-            log.info("Data loaded from {}", path);
+            log.info("Data loaded from {}", DATA_FILE);
         }
     }
 }

@@ -432,3 +432,77 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 2026-02-02 22:18:52.470 [main] INFO  Main - Processing operation: GET_TOP_EXP
 2026-02-02 22:19:00.180 [main] INFO  Main - Accepted connection from /127.0.0.1
 2026-02-02 22:19:00.181 [main] INFO  Main - Processing operation: GET_HISTORY_TRANSFER
+2026-02-03 19:58:50.535 [main] INFO  Main - Server is starting...
+2026-02-03 19:58:50.593 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-03 19:58:50.593 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-03 19:58:50.601 [main] INFO  Main - Server is listening on port 6666
+2026-02-03 19:59:52.002 [main] INFO  Main - Server is starting...
+2026-02-03 19:59:52.045 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-03 19:59:52.045 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-03 19:59:52.051 [main] INFO  Main - Server is listening on port 6666
+2026-02-03 20:00:22.635 [main] INFO  Main - Accepted connection from /127.0.0.1
+2026-02-03 20:00:22.692 [main] INFO  Main - Processing operation: GET_ALL
+2026-02-03 20:52:52.214 [main] INFO  Main - Server is starting...
+2026-02-03 20:52:52.254 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-03 20:52:52.256 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-03 20:52:52.262 [main] INFO  Main - Server is listening on port 6666
+2026-02-03 21:00:38.195 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-03 21:00:38.196 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:00:38.208 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:00:41.809 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-02-03 21:00:41.809 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:00:41.811 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:00:50.384 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-02-03 21:00:50.384 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:00:50.392 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:01:32.598 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-02-03 21:01:32.599 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:01:32.608 [pool-2-thread-4] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:01:38.307 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-02-03 21:01:38.308 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:01:38.309 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:01:44.457 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-03 21:01:44.457 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:01:44.467 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:04:57.188 [main] INFO  Main - Server is starting...
+2026-02-03 21:04:57.234 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-03 21:04:57.234 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-03 21:04:57.240 [main] INFO  Main - Server is listening on port 6666
+2026-02-03 21:05:05.889 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-03 21:05:05.889 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:05:05.892 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:05:13.093 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-02-03 21:05:13.094 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:05:13.095 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:05:17.340 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-02-03 21:05:17.341 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:05:17.342 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:05:20.585 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-02-03 21:05:20.585 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:05:20.593 [pool-2-thread-4] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:05:25.273 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-02-03 21:05:25.274 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:05:25.275 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:06:05.961 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-03 21:06:05.961 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:06:05.966 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:06:28.020 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-02-03 21:06:28.020 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:06:28.021 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:06:30.623 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-02-03 21:06:30.624 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:06:30.624 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:06:33.358 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-02-03 21:06:33.359 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:06:33.360 [pool-2-thread-4] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:06:38.261 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-02-03 21:06:38.261 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:06:38.261 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:07:05.972 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-03 21:07:05.972 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-03 21:07:05.973 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-03 21:07:28.035 [pool-2-thread-2] ERROR ClientHandler - Connection error: Connection reset by peer
+2026-02-03 21:07:30.633 [pool-2-thread-3] ERROR ClientHandler - Connection error: Connection reset by peer
+2026-02-03 21:07:33.375 [pool-2-thread-4] ERROR ClientHandler - Connection error: Connection reset by peer
+2026-02-03 21:07:38.264 [pool-2-thread-5] ERROR ClientHandler - Connection error: Connection reset by peer
+2026-02-03 21:08:05.986 [pool-2-thread-1] ERROR ClientHandler - Connection error: Connection reset by peer

@@ -8,6 +8,7 @@ import org.example.model.Operations;
 import org.example.model.request.Request;
 import org.example.model.response.Response;
 import org.example.network.ClientHandler;
+import org.example.repository.impl.EmployeeRepositoryImpl;
 import org.example.service.EmployeeManager;
 
 import java.io.IOException;
@@ -23,7 +24,7 @@ import java.util.concurrent.Executors;
 @Log4j2
 public class Main {
     private static final int PORT = 6666;
-    private static final EmployeeManager manager = new EmployeeManager();
+    private static final EmployeeManager manager = new EmployeeManager(new EmployeeRepositoryImpl());
     private static final String ADMIN_PASS = "admin123";
     private static final ObjectMapper mapper = new ObjectMapper();
     private static final String DATA_FILE = "data.bin";

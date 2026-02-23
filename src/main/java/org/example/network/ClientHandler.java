@@ -105,6 +105,7 @@ public class ClientHandler implements Runnable {
                         return new Response(false, "SUDO: Access denied", null);
                     }
                     manager.saveToFile();
+                    manager.saveToDatabase();
                     return new Response(true, "Data saved successfully on server", null);
 
                 case LOAD_DATA:

@@ -2377,3 +2377,20 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 2026-02-23 21:09:54.590 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
 2026-02-23 21:09:54.591 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
 2026-02-23 21:09:54.591 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-23 21:37:00.282 [main] INFO  Main - Server is starting...
+2026-02-23 21:37:00.325 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-23 21:37:00.386 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-23 21:37:00.559 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-23 21:37:00.582 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-23 21:37:00.681 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-23 21:37:00.683 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-23 21:37:00.683 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-23 21:37:00.683 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-23 21:37:00.684 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-23 21:37:00.684 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-23 21:37:00.886 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-23 21:37:01.754 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-23 21:37:01.767 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@beabd6b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-23 21:37:01.911 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-23 21:37:01.911 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-23 21:37:01.912 [main] INFO  Main - Server is listening on port 6666

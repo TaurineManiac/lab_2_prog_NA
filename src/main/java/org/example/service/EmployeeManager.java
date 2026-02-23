@@ -3,6 +3,8 @@ package org.example.service;
 import lombok.RequiredArgsConstructor;
 import org.example.model.*;
 import lombok.extern.log4j.Log4j2;
+import org.example.repository.inter.EmployeeRepository;
+
 import java.io.*;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -17,6 +19,7 @@ public class EmployeeManager {
     private HashMap<Integer, String> projectMap = new HashMap<>();
     private List<String> transfersBetweenProjects = new LinkedList<>();
     private final String DATA_FILE = "data.bin";
+    private final EmployeeRepository employeeRepository;
 
     public synchronized void addEmployee(Employee e) {
         employees.add(e);
@@ -88,12 +91,20 @@ public class EmployeeManager {
         return "\n--- Project Transfer History ---\n" + String.join("\n", transfersBetweenProjects);
     }
 
-    public synchronized boolean removeEmployee(String id) {
+    public synchronized boolean removeEmployee(String id) throws IOException {
         boolean removed = employees.removeIf(e -> e.getId().equals(id));
         if (removed) {
             salaryMap.remove(parseInt(id));
             projectMap.remove(parseInt(id));
         }
+        try {
+            employeeRepository.deleteById(parseInt(id));
+            log.info("Employee ID {} removed from database", id);
+        } catch (Exception e) {
+            log.error("Failed to remove employee from DB: {}", e.getMessage());
+        }
+        saveToFile();
+        saveToDatabase();
         return removed;
     }
 
@@ -105,6 +116,13 @@ public class EmployeeManager {
                     transfersBetweenProjects.add(e.getId() + ": " + e.getCurrentProject() + " -> " + newProject);
                     projectMap.put(parseInt(e.getId()), newProject);
                     e.assignProject(newProject);
+                    try {
+                        saveToDatabase();
+                        saveToFile();
+                    } catch (IOException ex) {
+                        log.error("Failed to save project: {}", ex.getMessage());
+                        throw new RuntimeException(ex);
+                    }
                     return true;
                 })
                 .orElse(false);
@@ -118,6 +136,20 @@ public class EmployeeManager {
             oos.writeObject(transfersBetweenProjects);
             log.info("Data saved to {}", DATA_FILE);
         }
+        catch (Exception e) {
+            log.error("Error while saving data to {}", DATA_FILE, e);
+        }
+
+    }
+
+    public void saveToDatabase() throws IOException {
+        try{
+            employeeRepository.save(employees);
+            log.info("Data successfully synchronized with PostgreSQL database.");
+        }
+        catch (Exception e) {
+            log.error("Error while saving data to DataBase: ", e);
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -128,6 +160,8 @@ public class EmployeeManager {
             employees = (List<Employee>) ois.readObject();
             transfersBetweenProjects = (LinkedList<String>) ois.readObject();
             log.info("Data loaded from {}", DATA_FILE);
+
+            saveToDatabase();
         }
     }
 }

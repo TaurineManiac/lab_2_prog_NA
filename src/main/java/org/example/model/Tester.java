@@ -1,6 +1,8 @@
 package org.example.model;
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 import lombok.*;
 
 @NoArgsConstructor
@@ -8,6 +10,8 @@ import lombok.*;
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 @JsonTypeName("Tester")
+@Entity
+@DiscriminatorValue("Tester")
 public class Tester extends Employee {
     private String testType;
 

@@ -115,6 +115,16 @@ public class ClientHandler implements Runnable {
                 case EXIT:
                     return new Response(true, "Session closed", null);
 
+                case FILTER_BY_ROLE:
+
+                    return new Response(true,"Success", listToJson(manager.filterByEmployee(inputData)));
+                case FILTER_BY_EXP:
+                    return new Response(true,"Success", listToJson(manager.filterByYear(Integer.parseInt(inputData))));
+
+                case FILTER_BY_PROJECT:
+                    return new Response(true,"Success",listToJson(manager.filterByName(inputData))) ;
+
+
                 default:
                     return new Response(false, "Operation not supported", null);
             }

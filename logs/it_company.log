@@ -2394,3 +2394,400 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 2026-02-23 21:37:01.911 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
 2026-02-23 21:37:01.911 [main] INFO  Main - Data auto-loaded from data.bin
 2026-02-23 21:37:01.912 [main] INFO  Main - Server is listening on port 6666
+2026-02-23 22:12:35.784 [main] INFO  Main - Server is starting...
+2026-02-23 22:12:35.827 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-23 22:12:35.885 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-23 22:12:36.054 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-23 22:12:36.075 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-23 22:12:36.171 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-23 22:12:36.174 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-23 22:12:36.174 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-23 22:12:36.174 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-23 22:12:36.174 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-23 22:12:36.176 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-23 22:12:36.229 [main] WARN  JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:259) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:135) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:132) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:135) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:129) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:449) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:101) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:910) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:960) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.example.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:37) [main/:?]
+	at org.example.util.HibernateUtil.<clinit>(HibernateUtil.java:16) [main/:?]
+	at org.example.repository.impl.EmployeeRepositoryImpl.save(EmployeeRepositoryImpl.java:17) [main/:?]
+	at org.example.service.EmployeeManager.saveToDatabase(EmployeeManager.java:147) [main/:?]
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:164) [main/:?]
+	at org.example.Main.main(Main.java:38) [main/:?]
+2026-02-23 22:12:36.255 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-23 22:12:36.267 [main] WARN  SqlExceptionHelper - SQL Error: 0, SQLState: 08001
+2026-02-23 22:12:36.267 [main] ERROR SqlExceptionHelper - Connection to localhost:5433 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2026-02-23 22:12:36.269 [main] ERROR HibernateUtil - Initial SessionFactory creation failed.
+org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Error calling Driver#connect [Connection to localhost:5433 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [null]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:129) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:449) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:101) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:910) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:960) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.example.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:37) [main/:?]
+	at org.example.util.HibernateUtil.<clinit>(HibernateUtil.java:16) [main/:?]
+	at org.example.repository.impl.EmployeeRepositoryImpl.save(EmployeeRepositoryImpl.java:17) [main/:?]
+	at org.example.service.EmployeeManager.saveToDatabase(EmployeeManager.java:147) [main/:?]
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:164) [main/:?]
+	at org.example.Main.main(Main.java:38) [main/:?]
+Caused by: org.hibernate.exception.JDBCConnectionException: Error calling Driver#connect [Connection to localhost:5433 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [null]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:134) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:135) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	... 17 more
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5433 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.Driver.makeConnection(Driver.java:444) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:40) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:135) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	... 17 more
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:759) ~[?:?]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.Driver.makeConnection(Driver.java:444) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:40) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:135) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	... 17 more
+2026-02-23 22:13:24.850 [main] INFO  Main - Server is starting...
+2026-02-23 22:13:24.886 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-23 22:13:24.946 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-23 22:13:25.107 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-23 22:13:25.129 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-23 22:13:25.235 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-23 22:13:25.238 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-23 22:13:25.238 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-23 22:13:25.238 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-23 22:13:25.238 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-23 22:13:25.240 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-23 22:13:25.451 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-23 22:13:26.292 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-23 22:13:26.309 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@beabd6b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-23 22:13:26.465 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-23 22:13:26.466 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-23 22:13:26.467 [main] INFO  Main - Server is listening on port 6666
+2026-02-24 13:59:29.514 [main] INFO  Main - Server is starting...
+2026-02-24 13:59:29.661 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-24 13:59:29.791 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-24 13:59:30.155 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-24 13:59:30.192 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-24 13:59:30.347 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-24 13:59:30.352 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-24 13:59:30.352 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-24 13:59:30.352 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-24 13:59:30.352 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-24 13:59:30.356 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-24 13:59:30.800 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-24 13:59:32.000 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24 13:59:32.027 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@621624b1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-24 13:59:32.307 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-24 13:59:32.307 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-24 13:59:32.308 [main] INFO  Main - Server is listening on port 6666
+2026-02-24 14:06:56.792 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 14:06:56.794 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:06:56.830 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-24 14:07:41.273 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-02-24 14:07:41.274 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:07:41.278 [pool-2-thread-2] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-02-24 14:07:41.321 [pool-2-thread-2] INFO  EmployeeManager - Employee added: Elena (Role: Manager)
+2026-02-24 14:07:48.725 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-02-24 14:07:48.726 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:07:48.729 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-24 14:08:20.251 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-02-24 14:08:20.252 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:08:20.254 [pool-2-thread-4] INFO  ClientHandler - Processing operation: SAVE_DATA
+2026-02-24 14:08:20.256 [pool-2-thread-4] INFO  EmployeeManager - Data saved to data.bin
+2026-02-24 14:08:20.350 [pool-2-thread-4] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-24 14:08:36.906 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-02-24 14:08:36.908 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:08:36.909 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_TOP_SALARY
+2026-02-24 14:14:15.562 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 14:14:15.562 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:14:15.566 [pool-2-thread-1] INFO  ClientHandler - Processing operation: EDIT_EMPLOYEE
+2026-02-24 14:14:15.773 [pool-2-thread-1] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-24 14:14:15.775 [pool-2-thread-1] INFO  EmployeeManager - Data saved to data.bin
+2026-02-24 14:14:18.194 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-02-24 14:14:18.195 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:14:18.198 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-24 14:14:50.606 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-02-24 14:14:50.607 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:14:50.608 [pool-2-thread-3] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 14:15:02.870 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-02-24 14:15:02.870 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:15:02.872 [pool-2-thread-4] INFO  ClientHandler - Processing operation: GET_STATISTICS
+2026-02-24 14:15:23.556 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-02-24 14:15:23.558 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:15:23.559 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_HISTORY_TRANSFER
+2026-02-24 14:17:02.340 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 14:17:02.340 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:17:02.342 [pool-2-thread-1] INFO  ClientHandler - Processing operation: SEARCH_BY_SKILLS
+2026-02-24 14:18:03.419 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-02-24 14:18:03.419 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:18:03.420 [pool-2-thread-2] INFO  ClientHandler - Processing operation: SEARCH_BY_SKILLS
+2026-02-24 14:19:23.682 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-02-24 14:19:23.682 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:19:23.684 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-24 14:20:00.617 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-02-24 14:20:00.617 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:20:00.619 [pool-2-thread-4] INFO  ClientHandler - Processing operation: SEARCH_BY_SKILLS
+2026-02-24 14:21:12.200 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-02-24 14:21:12.200 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:21:12.201 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_ALL
+2026-02-24 14:21:58.017 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 14:21:58.018 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:21:58.019 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_STATISTICS
+2026-02-24 14:34:31.177 [main] INFO  Main - Server is starting...
+2026-02-24 14:34:31.227 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-24 14:34:31.287 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-24 14:34:31.461 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-24 14:34:31.483 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-24 14:34:31.584 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-24 14:34:31.586 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-24 14:34:31.586 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-24 14:34:31.586 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-24 14:34:31.586 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-24 14:34:31.588 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-24 14:34:31.757 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-24 14:34:32.522 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24 14:34:32.536 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@621624b1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-24 14:34:32.675 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-24 14:34:32.675 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-24 14:34:32.676 [main] INFO  Main - Server is listening on port 6666
+2026-02-24 14:35:08.151 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 14:35:08.151 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:35:08.161 [pool-2-thread-1] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 14:36:57.638 [main] INFO  Main - Server is starting...
+2026-02-24 14:36:57.682 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-24 14:36:57.744 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-24 14:36:57.909 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-24 14:36:57.931 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-24 14:36:58.030 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-24 14:36:58.032 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-24 14:36:58.032 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-24 14:36:58.033 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-24 14:36:58.033 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-24 14:36:58.034 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-24 14:36:58.197 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-24 14:36:58.972 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24 14:36:58.986 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@621624b1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-24 14:36:59.126 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-24 14:36:59.126 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-24 14:36:59.127 [main] INFO  Main - Server is listening on port 6666
+2026-02-24 14:37:13.907 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 14:37:13.907 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:37:13.910 [pool-2-thread-1] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 14:38:37.825 [main] INFO  Main - Server is starting...
+2026-02-24 14:38:37.868 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-24 14:38:37.927 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-24 14:38:38.098 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-24 14:38:38.121 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-24 14:38:38.227 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-24 14:38:38.229 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-24 14:38:38.229 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-24 14:38:38.229 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-24 14:38:38.229 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-24 14:38:38.231 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-24 14:38:38.404 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-24 14:38:39.249 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24 14:38:39.262 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@621624b1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-24 14:38:39.395 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-24 14:38:39.396 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-24 14:38:39.396 [main] INFO  Main - Server is listening on port 6666
+2026-02-24 14:38:48.786 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 14:38:48.786 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:38:48.794 [pool-2-thread-1] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 14:39:34.644 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-02-24 14:39:34.645 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:39:34.655 [pool-2-thread-2] INFO  ClientHandler - Processing operation: FILTER_BY_ROLE
+2026-02-24 14:40:15.488 [main] INFO  Main - Server is starting...
+2026-02-24 14:40:15.527 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-24 14:40:15.590 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-24 14:40:15.769 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-24 14:40:15.791 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-24 14:40:15.891 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-24 14:40:15.893 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-24 14:40:15.893 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-24 14:40:15.894 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-24 14:40:15.894 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-24 14:40:15.895 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-24 14:40:16.059 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-24 14:40:16.826 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24 14:40:16.839 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@621624b1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-24 14:40:16.969 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-24 14:40:16.969 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-24 14:40:16.970 [main] INFO  Main - Server is listening on port 6666
+2026-02-24 14:40:31.293 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 14:40:31.294 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:40:31.303 [pool-2-thread-1] INFO  ClientHandler - Processing operation: FILTER_BY_ROLE
+2026-02-24 14:50:47.913 [main] INFO  Main - Server is starting...
+2026-02-24 14:50:47.971 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-24 14:50:48.051 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-24 14:50:48.287 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-24 14:50:48.315 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-24 14:50:48.447 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-24 14:50:48.451 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-24 14:50:48.451 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-24 14:50:48.451 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-24 14:50:48.451 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-24 14:50:48.453 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-24 14:50:48.724 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-24 14:50:49.749 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24 14:50:49.777 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@621624b1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-24 14:50:49.990 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-24 14:50:49.990 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-24 14:50:49.991 [main] INFO  Main - Server is listening on port 6666
+2026-02-24 14:51:38.074 [main] INFO  Main - Server is starting...
+2026-02-24 14:51:38.142 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-24 14:51:38.235 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-24 14:51:38.511 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-24 14:51:38.546 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-24 14:51:38.707 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-24 14:51:38.711 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-24 14:51:38.712 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-24 14:51:38.712 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-24 14:51:38.712 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-24 14:51:38.715 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-24 14:51:39.043 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-24 14:51:40.144 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24 14:51:40.163 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@621624b1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-24 14:51:40.342 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-24 14:51:40.342 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-24 14:51:40.343 [main] INFO  Main - Server is listening on port 6666
+2026-02-24 14:51:48.709 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 14:51:48.709 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:51:48.724 [pool-2-thread-1] INFO  ClientHandler - Processing operation: FILTER_BY_PROJECT
+2026-02-24 14:52:40.904 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-02-24 14:52:40.905 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:52:40.907 [pool-2-thread-2] INFO  ClientHandler - Processing operation: FILTER_BY_EXP
+2026-02-24 14:53:39.736 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-02-24 14:53:39.736 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:53:39.738 [pool-2-thread-3] INFO  ClientHandler - Processing operation: FILTER_BY_ROLE
+2026-02-24 14:53:51.170 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-02-24 14:53:51.170 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 14:53:51.171 [pool-2-thread-4] INFO  ClientHandler - Processing operation: FILTER_BY_EXP
+2026-02-24 16:55:16.990 [main] INFO  Main - Server is starting...
+2026-02-24 16:55:17.044 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-24 16:55:17.133 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-24 16:55:17.401 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-24 16:55:17.442 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-24 16:55:17.596 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-24 16:55:17.612 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-24 16:55:17.612 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-24 16:55:17.617 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-24 16:55:17.618 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-24 16:55:17.630 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-24 16:55:17.860 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-24 16:55:18.820 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24 16:55:18.839 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@621624b1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-24 16:55:18.995 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-24 16:55:18.995 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-24 16:55:18.996 [main] INFO  Main - Server is listening on port 6666
+2026-02-24 16:55:37.450 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 16:55:37.451 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 16:55:37.463 [pool-2-thread-1] INFO  ClientHandler - Processing operation: FILTER_BY_ROLE

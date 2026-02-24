@@ -44,6 +44,18 @@ public class EmployeeManager {
                 .toList();
     }
 
+    public synchronized List<Employee> filterByEmployee(String filter) {
+        return employees.stream().filter(e -> e.getRole().equals(filter)).toList();
+    }
+
+    public synchronized List<Employee> filterByYear(int index) {
+        return employees.stream().filter(e -> e.getExperience() == (index)).toList();
+    }
+
+    public synchronized List<Employee> filterByName(String filter) {
+        return employees.stream().filter(e -> e.getName().equals(filter)).toList();
+    }
+
     public synchronized String getStatisticsAsString() {
         if (employees.isEmpty()) return "No employees found.";
 

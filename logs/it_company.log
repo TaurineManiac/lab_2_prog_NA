@@ -2791,3 +2791,616 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 2026-02-24 16:55:37.450 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
 2026-02-24 16:55:37.451 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
 2026-02-24 16:55:37.463 [pool-2-thread-1] INFO  ClientHandler - Processing operation: FILTER_BY_ROLE
+2026-02-24 18:24:47.597 [main] INFO  Main - Server is starting...
+2026-02-24 18:24:47.680 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-02-24 18:24:47.771 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-24 18:24:48.043 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-02-24 18:24:48.074 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-24 18:24:48.205 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-24 18:24:48.208 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-02-24 18:24:48.208 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-02-24 18:24:48.209 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-02-24 18:24:48.209 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-02-24 18:24:48.211 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-02-24 18:24:48.462 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-24 18:24:49.397 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-24 18:24:49.414 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@621624b1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-24 18:24:49.589 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-02-24 18:24:49.589 [main] INFO  Main - Data auto-loaded from data.bin
+2026-02-24 18:24:49.590 [main] INFO  Main - Server is listening on port 6666
+2026-02-24 18:24:55.440 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 18:24:55.440 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:24:55.457 [pool-2-thread-1] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 18:25:07.889 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-02-24 18:25:07.889 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:25:07.890 [pool-2-thread-2] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 18:25:09.048 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-02-24 18:25:09.049 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:25:09.051 [pool-2-thread-3] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 18:25:09.746 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-02-24 18:25:09.747 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:25:09.748 [pool-2-thread-4] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 18:25:11.359 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-02-24 18:25:11.360 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:25:11.362 [pool-2-thread-5] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 18:25:14.241 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 18:25:14.242 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:25:14.243 [pool-2-thread-1] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 18:25:18.955 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-02-24 18:25:18.956 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:25:18.957 [pool-2-thread-2] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 18:25:20.867 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-02-24 18:25:20.868 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:25:20.869 [pool-2-thread-3] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 18:25:21.094 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-02-24 18:25:21.094 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:25:21.095 [pool-2-thread-4] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME
+2026-02-24 18:25:24.806 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-02-24 18:25:24.806 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:25:24.807 [pool-2-thread-5] INFO  ClientHandler - Processing operation: FILTER_BY_ROLE
+2026-02-24 18:25:25.565 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-02-24 18:25:25.565 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:25:25.566 [pool-2-thread-1] INFO  ClientHandler - Processing operation: FILTER_BY_ROLE
+2026-02-24 18:25:34.500 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-02-24 18:25:34.500 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:25:34.501 [pool-2-thread-2] INFO  ClientHandler - Processing operation: FILTER_BY_ROLE
+2026-02-24 18:28:33.762 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-02-24 18:28:33.763 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:28:33.776 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_HISTORY_TRANSFER
+2026-02-24 18:31:59.296 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-02-24 18:31:59.296 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:31:59.308 [pool-2-thread-4] INFO  ClientHandler - Processing operation: SEARCH_BY_SKILLS
+2026-02-24 18:32:06.097 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-02-24 18:32:06.097 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-02-24 18:32:06.098 [pool-2-thread-5] INFO  ClientHandler - Processing operation: SEARCH_BY_SKILLS
+2026-03-17 09:44:38.846 [main] INFO  Main - Server is starting...
+2026-03-17 09:44:39.047 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-03-17 09:44:39.181 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-17 09:44:39.562 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-03-17 09:44:39.594 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-17 09:44:39.737 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-17 09:44:39.746 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-03-17 09:44:39.746 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-03-17 09:44:39.746 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-03-17 09:44:39.746 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-03-17 09:44:39.746 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-03-17 09:44:39.823 [main] WARN  JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:259) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:135) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:132) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:135) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:129) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:449) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:101) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:910) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:960) [hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.example.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:37) [main/:?]
+	at org.example.util.HibernateUtil.<clinit>(HibernateUtil.java:16) [main/:?]
+	at org.example.repository.impl.EmployeeRepositoryImpl.save(EmployeeRepositoryImpl.java:17) [main/:?]
+	at org.example.service.EmployeeManager.saveToDatabase(EmployeeManager.java:159) [main/:?]
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:176) [main/:?]
+	at org.example.Main.main(Main.java:38) [main/:?]
+2026-03-17 09:44:39.852 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-17 09:44:39.864 [main] WARN  SqlExceptionHelper - SQL Error: 0, SQLState: 08001
+2026-03-17 09:44:39.864 [main] ERROR SqlExceptionHelper - Connection to localhost:5433 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2026-03-17 09:44:39.864 [main] ERROR HibernateUtil - Initial SessionFactory creation failed.
+org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Error calling Driver#connect [Connection to localhost:5433 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [null]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:129) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:449) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:101) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:910) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:960) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.example.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:37) [main/:?]
+	at org.example.util.HibernateUtil.<clinit>(HibernateUtil.java:16) [main/:?]
+	at org.example.repository.impl.EmployeeRepositoryImpl.save(EmployeeRepositoryImpl.java:17) [main/:?]
+	at org.example.service.EmployeeManager.saveToDatabase(EmployeeManager.java:159) [main/:?]
+	at org.example.service.EmployeeManager.loadFromFile(EmployeeManager.java:176) [main/:?]
+	at org.example.Main.main(Main.java:38) [main/:?]
+Caused by: org.hibernate.exception.JDBCConnectionException: Error calling Driver#connect [Connection to localhost:5433 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [null]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:134) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:135) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	... 17 more
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5433 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.Driver.makeConnection(Driver.java:444) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:40) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:135) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	... 17 more
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:759) ~[?:?]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.Driver.makeConnection(Driver.java:444) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.7.1.jar:42.7.1]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:40) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:135) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	... 17 more
+2026-03-17 09:45:46.889 [main] INFO  Main - Server is starting...
+2026-03-17 09:45:47.026 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-03-17 09:45:47.119 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-17 09:45:47.419 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-03-17 09:45:47.445 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-17 09:45:47.601 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-17 09:45:47.601 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-03-17 09:45:47.601 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-03-17 09:45:47.601 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-03-17 09:45:47.601 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-03-17 09:45:47.608 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-03-17 09:45:47.926 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-17 09:45:49.027 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-17 09:45:49.055 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@beabd6b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-03-17 09:45:49.260 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-03-17 09:45:49.260 [main] INFO  Main - Data auto-loaded from data.bin
+2026-03-17 09:45:49.262 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 09:52:18.820 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 09:52:18.821 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 09:52:18.977 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_STATISTICS
+2026-03-17 09:53:42.432 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-17 09:53:42.432 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 09:53:42.435 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 09:58:05.204 [main] INFO  Main - Server is starting...
+2026-03-17 09:58:05.351 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-03-17 09:58:05.484 [main] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-17 09:58:05.809 [main] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-03-17 09:58:05.851 [main] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-17 09:58:05.986 [main] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-17 09:58:05.992 [main] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-03-17 09:58:05.992 [main] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-03-17 09:58:05.992 [main] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-03-17 09:58:05.992 [main] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-03-17 09:58:05.996 [main] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-03-17 09:58:06.219 [main] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-17 09:58:07.325 [main] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-17 09:58:07.350 [main] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@beabd6b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-03-17 09:58:07.541 [main] INFO  EmployeeManager - Data successfully synchronized with PostgreSQL database.
+2026-03-17 09:58:07.542 [main] INFO  Main - Data auto-loaded from data.bin
+2026-03-17 09:58:07.543 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 09:58:33.368 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 09:58:33.371 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 09:58:33.375 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 09:58:33.402 [pool-2-thread-1] ERROR ClientHandler - Request processing error: 
+java.lang.ClassCastException: class org.example.model.Developer cannot be cast to class java.lang.Comparable (org.example.model.Developer is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
+	at java.base/java.util.Comparators$NaturalOrderComparator.compare(Comparators.java:47) ~[?:?]
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355) ~[?:?]
+	at java.base/java.util.TimSort.sort(TimSort.java:220) ~[?:?]
+	at java.base/java.util.Arrays.sort(Arrays.java:1308) ~[?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:353) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:557) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:622) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:291) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:631) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:637) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:642) ~[?:?]
+	at org.example.service.EmployeeManager.getAll(EmployeeManager.java:31) ~[main/:?]
+	at org.example.network.ClientHandler.handleRequest(ClientHandler.java:61) ~[main/:?]
+	at org.example.network.ClientHandler.run(ClientHandler.java:43) ~[main/:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1575) [?:?]
+2026-03-17 10:04:50.975 [main] INFO  Main - Server is starting...
+2026-03-17 10:04:51.027 [main] WARN  Main - Could not auto-load data (it's okay if the file doesn't exist yet)
+2026-03-17 10:04:51.074 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 10:05:27.509 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 10:05:27.509 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:05:27.541 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:06:23.265 [main] INFO  Main - Server is starting...
+2026-03-17 10:06:23.297 [main] WARN  Main - Could not auto-load data (it's okay if the file doesn't exist yet)
+2026-03-17 10:06:23.313 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 10:06:32.790 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 10:06:32.790 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:06:32.804 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:06:53.417 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-17 10:06:53.417 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:06:53.417 [pool-2-thread-2] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-03-17 10:06:53.480 [pool-2-thread-2] INFO  EmployeeManager - Employee added: ignat (Role: Developer)
+2026-03-17 10:07:48.275 [main] INFO  Main - Server is starting...
+2026-03-17 10:07:48.279 [main] WARN  Main - Could not auto-load data (it's okay if the file doesn't exist yet)
+2026-03-17 10:07:48.300 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 10:08:31.656 [main] INFO  Main - Server is starting...
+2026-03-17 10:08:31.663 [main] WARN  Main - Could not auto-load data (it's okay if the file doesn't exist yet)
+2026-03-17 10:08:31.666 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 10:11:23.776 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 10:11:23.779 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:11:23.792 [pool-2-thread-1] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-03-17 10:11:23.866 [pool-2-thread-1] INFO  EmployeeManager - Employee added: ignat (Role: Developer)
+2026-03-17 10:11:27.131 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-17 10:11:27.132 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:11:27.134 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:15:28.481 [main] INFO  Main - Server is starting...
+2026-03-17 10:15:28.489 [main] WARN  Main - Could not auto-load data (it's okay if the file doesn't exist yet)
+2026-03-17 10:15:28.499 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 10:15:39.716 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 10:15:39.716 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:15:39.721 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:21:01.553 [main] INFO  Main - Server is starting...
+2026-03-17 10:21:01.563 [main] WARN  Main - Could not auto-load data (it's okay if the file doesn't exist yet)
+2026-03-17 10:21:01.576 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 10:21:25.110 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 10:21:25.110 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:21:25.126 [pool-2-thread-1] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-03-17 10:21:25.214 [pool-2-thread-1] INFO  EmployeeManager - Employee added: ignat (Role: Developer)
+2026-03-17 10:21:25.240 [pool-2-thread-1] INFO  EmployeeManager - Data saved to data.bin
+2026-03-17 10:21:25.240 [pool-2-thread-1] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 10:21:47.691 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-17 10:21:47.691 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:21:47.696 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:21:55.396 [main] INFO  Main - Server is starting...
+2026-03-17 10:21:55.451 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-03-17 10:21:55.454 [main] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 10:21:55.454 [main] INFO  Main - Data auto-loaded from data.bin
+2026-03-17 10:21:55.462 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 10:22:05.011 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 10:22:05.011 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:22:05.021 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:22:40.583 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-17 10:22:40.583 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:22:40.583 [pool-2-thread-2] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-03-17 10:22:40.622 [pool-2-thread-2] INFO  EmployeeManager - Employee added: abraham (Role: Developer)
+2026-03-17 10:22:40.625 [pool-2-thread-2] INFO  EmployeeManager - Data saved to data.bin
+2026-03-17 10:22:40.625 [pool-2-thread-2] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 10:22:42.364 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-03-17 10:22:42.365 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:22:42.367 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:23:16.551 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-03-17 10:23:16.558 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:23:16.558 [pool-2-thread-4] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-03-17 10:23:16.558 [pool-2-thread-4] INFO  EmployeeManager - Employee added: zoya (Role: Developer)
+2026-03-17 10:23:16.590 [pool-2-thread-4] INFO  EmployeeManager - Data saved to data.bin
+2026-03-17 10:23:16.592 [pool-2-thread-4] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 10:23:18.449 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-03-17 10:23:18.449 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:23:18.454 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:24:24.129 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 10:24:24.139 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:24:24.139 [pool-2-thread-1] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-03-17 10:24:24.142 [pool-2-thread-1] INFO  EmployeeManager - Employee added: boris (Role: Manager)
+2026-03-17 10:24:24.144 [pool-2-thread-1] INFO  EmployeeManager - Data saved to data.bin
+2026-03-17 10:24:24.144 [pool-2-thread-1] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 10:24:27.302 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-17 10:24:27.302 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:24:27.302 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:30:23.147 [main] INFO  Main - Server is starting...
+2026-03-17 10:30:23.212 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-03-17 10:30:23.220 [main] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 10:30:23.220 [main] INFO  Main - Data auto-loaded from data.bin
+2026-03-17 10:30:23.225 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 10:30:34.506 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 10:30:34.506 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:30:34.508 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:34:31.224 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-17 10:34:31.224 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:34:31.228 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:35:03.464 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-03-17 10:35:03.464 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:35:03.464 [pool-2-thread-3] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-03-17 10:35:03.522 [pool-2-thread-3] INFO  EmployeeManager - Employee added: cursed (Role: Manager)
+2026-03-17 10:35:03.522 [pool-2-thread-3] INFO  EmployeeManager - Data saved to data.bin
+2026-03-17 10:35:03.525 [pool-2-thread-3] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 10:35:05.233 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-03-17 10:35:05.233 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:35:05.239 [pool-2-thread-4] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 10:35:17.584 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-03-17 10:35:17.584 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:35:17.584 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_STATISTICS
+2026-03-17 10:35:25.657 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 10:35:25.658 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 10:35:25.660 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_HISTORY_TRANSFER
+2026-03-17 12:17:04.814 [main] INFO  Main - Server is starting...
+2026-03-17 12:17:04.852 [main] WARN  Main - Could not auto-load data (it's okay if the file doesn't exist yet)
+2026-03-17 12:17:04.864 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 12:17:40.768 [main] INFO  Main - Server is starting...
+2026-03-17 12:17:40.772 [main] WARN  Main - Could not auto-load data (it's okay if the file doesn't exist yet)
+2026-03-17 12:17:40.782 [main] INFO  Main - Server is listening on port 6666
+2026-03-17 12:18:25.671 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 12:18:25.671 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 12:18:25.689 [pool-2-thread-1] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-03-17 12:18:25.751 [pool-2-thread-1] INFO  EmployeeManager - Employee added: ignat (Role: Developer)
+2026-03-17 12:18:25.771 [pool-2-thread-1] INFO  EmployeeManager - Data saved to data.bin
+2026-03-17 12:18:25.771 [pool-2-thread-1] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 12:18:56.502 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-17 12:18:56.502 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 12:18:56.502 [pool-2-thread-2] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-03-17 12:18:56.502 [pool-2-thread-2] INFO  EmployeeManager - Employee added: zoya (Role: Developer)
+2026-03-17 12:18:56.507 [pool-2-thread-2] INFO  EmployeeManager - Data saved to data.bin
+2026-03-17 12:18:56.507 [pool-2-thread-2] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 12:18:58.212 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-03-17 12:18:58.212 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 12:18:58.212 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 12:19:18.580 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-03-17 12:19:18.581 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 12:19:18.581 [pool-2-thread-4] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-03-17 12:19:18.581 [pool-2-thread-4] INFO  EmployeeManager - Employee added: oleg (Role: Developer)
+2026-03-17 12:19:18.612 [pool-2-thread-4] INFO  EmployeeManager - Data saved to data.bin
+2026-03-17 12:19:18.612 [pool-2-thread-4] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 12:19:20.304 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-03-17 12:19:20.304 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 12:19:20.304 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 12:19:45.769 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 12:19:45.769 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 12:19:45.771 [pool-2-thread-1] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-03-17 12:19:45.773 [pool-2-thread-1] INFO  EmployeeManager - Employee added: elena (Role: Manager)
+2026-03-17 12:19:45.773 [pool-2-thread-1] INFO  EmployeeManager - Data saved to data.bin
+2026-03-17 12:19:45.773 [pool-2-thread-1] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 12:19:48.103 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-17 12:19:48.104 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 12:19:48.104 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 12:20:48.843 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-03-17 12:20:48.843 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 12:20:48.844 [pool-2-thread-3] INFO  ClientHandler - Processing operation: EDIT_EMPLOYEE
+2026-03-17 12:20:48.853 [pool-2-thread-3] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-17 12:20:48.853 [pool-2-thread-3] INFO  EmployeeManager - Data saved to data.bin
+2026-03-17 12:20:50.783 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-03-17 12:20:50.783 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 12:20:50.783 [pool-2-thread-4] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-17 12:20:58.980 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-03-17 12:20:58.980 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 12:20:58.980 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_STATISTICS
+2026-03-17 12:21:09.866 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-17 12:21:09.866 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-17 12:21:09.866 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_HISTORY_TRANSFER
+2026-03-23 12:37:34.068 [main] INFO  Main - Server is starting...
+2026-03-23 12:37:34.294 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-03-23 12:37:34.300 [main] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-23 12:37:34.301 [main] INFO  Main - Data auto-loaded from data.bin
+2026-03-23 12:37:34.311 [main] INFO  Main - Server is listening on port 6666
+2026-03-23 12:40:33.854 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-23 12:40:33.854 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 12:40:33.893 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 13:19:06.557 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-23 13:19:06.564 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 13:19:06.618 [pool-2-thread-2] INFO  ClientHandler - Processing operation: FILTER_BY_PROJECT
+2026-03-23 13:19:06.654 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-03-23 13:19:06.655 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 13:19:06.658 [pool-2-thread-3] INFO  ClientHandler - Processing operation: FILTER_BY_PROJECT
+2026-03-23 13:19:11.599 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-03-23 13:19:11.600 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 13:19:11.602 [pool-2-thread-4] INFO  ClientHandler - Processing operation: SEARCH_BY_SKILLS
+2026-03-23 13:19:42.339 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-03-23 13:19:42.339 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 13:19:42.341 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:14:39.330 [main] INFO  Main - Server is starting...
+2026-03-23 19:14:39.378 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-03-23 19:14:39.381 [main] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-23 19:14:39.382 [main] INFO  Main - Data auto-loaded from data.bin
+2026-03-23 19:14:39.388 [main] INFO  Main - Server is listening on port 6666
+2026-03-23 19:16:15.641 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-23 19:16:15.642 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:16:15.654 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:16:19.602 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-23 19:16:19.602 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:16:19.611 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:34:44.355 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-03-23 19:34:44.355 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:34:44.371 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:35:10.932 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-03-23 19:35:10.933 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:35:10.934 [pool-2-thread-4] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:35:11.729 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-03-23 19:35:11.729 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:35:11.730 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:35:12.517 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-23 19:35:12.517 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:35:12.518 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:35:12.693 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-23 19:35:12.694 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:35:12.695 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:35:12.854 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-03-23 19:35:12.854 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:35:12.856 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:35:13.029 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-03-23 19:35:13.030 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:35:13.031 [pool-2-thread-4] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:35:13.252 [pool-2-thread-5] INFO  ClientHandler - Start working thread: pool-2-thread-5
+2026-03-23 19:35:13.253 [pool-2-thread-5] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:35:13.254 [pool-2-thread-5] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:35:24.269 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-03-23 19:35:24.270 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:35:24.271 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_STATISTICS
+2026-03-23 19:37:32.784 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-03-23 19:37:32.784 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:37:32.801 [pool-2-thread-2] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-23 19:41:51.306 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-03-23 19:41:51.306 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-03-23 19:41:51.319 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-03-25 14:55:45.225 [main] INFO  Main - Server is starting...
+2026-03-25 14:55:45.319 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-03-25 14:55:45.324 [main] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-03-25 14:55:45.324 [main] INFO  Main - Data auto-loaded from data.bin
+2026-03-25 14:55:45.329 [main] INFO  Main - Server is listening on port 6666
+2026-04-10 19:18:22.792 [main] INFO  Main - Server is starting...
+2026-04-10 19:18:22.889 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-04-10 19:18:22.892 [main] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-04-10 19:18:22.894 [main] INFO  Main - Data auto-loaded from data.bin
+2026-04-10 19:18:22.903 [main] INFO  Main - Server is listening on port 6666
+2026-04-10 19:19:05.109 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-04-10 19:19:05.110 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-04-10 19:19:05.134 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-04-21 08:34:08.648 [main] INFO  Main - Server is starting...
+2026-04-21 08:34:08.742 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-04-21 08:34:08.746 [main] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-04-21 08:34:08.746 [main] INFO  Main - Data auto-loaded from data.bin
+2026-04-21 08:34:08.754 [main] INFO  Main - Server is listening on port 6666
+2026-04-21 08:37:04.728 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-04-21 08:37:04.728 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-04-21 08:37:04.750 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-04-21 08:52:16.690 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-04-21 08:52:16.693 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-04-21 08:52:16.705 [pool-2-thread-2] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-04-21 08:52:16.747 [pool-2-thread-2] INFO  EmployeeManager - Employee added: Zuza (Role: Tester)
+2026-04-21 08:52:16.750 [pool-2-thread-2] INFO  EmployeeManager - Data saved to data.bin
+2026-04-21 08:52:16.751 [pool-2-thread-2] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-04-21 08:52:19.826 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-04-21 08:52:19.826 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-04-21 08:52:19.828 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-04-21 09:01:35.874 [main] INFO  Main - Server is starting...
+2026-04-21 09:01:35.940 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-04-21 09:01:35.943 [main] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-04-21 09:01:35.943 [main] INFO  Main - Data auto-loaded from data.bin
+2026-04-21 09:01:35.952 [main] INFO  Main - Server is listening on port 6666
+2026-04-21 09:01:50.142 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-04-21 09:01:50.142 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-04-21 09:01:50.180 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-04-21 09:02:21.250 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-04-21 09:02:21.251 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-04-21 09:02:21.252 [pool-2-thread-2] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-04-21 09:02:21.280 [pool-2-thread-2] INFO  EmployeeManager - Employee added: pupa (Role: Manager)
+2026-04-21 09:02:21.282 [pool-2-thread-2] INFO  EmployeeManager - Data saved to data.bin
+2026-04-21 09:02:21.284 [pool-2-thread-2] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-04-21 09:02:21.412 [pool-2-thread-2] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-04-21 09:02:21.649 [pool-2-thread-2] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-04-21 09:02:21.693 [pool-2-thread-2] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-21 09:02:21.811 [pool-2-thread-2] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-04-21 09:02:21.814 [pool-2-thread-2] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-04-21 09:02:21.815 [pool-2-thread-2] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-04-21 09:02:21.815 [pool-2-thread-2] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-04-21 09:02:21.815 [pool-2-thread-2] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-04-21 09:02:21.816 [pool-2-thread-2] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-04-21 09:02:22.044 [pool-2-thread-2] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-21 09:02:22.959 [pool-2-thread-2] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-21 09:02:22.979 [pool-2-thread-2] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@b2a4dc4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-04-21 11:14:04.206 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-04-21 11:14:04.233 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-04-21 11:14:04.258 [pool-2-thread-3] INFO  ClientHandler - Processing operation: GET_ALL
+2026-04-21 11:14:27.167 [pool-2-thread-4] INFO  ClientHandler - Start working thread: pool-2-thread-4
+2026-04-21 11:14:27.169 [pool-2-thread-4] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-04-21 11:14:27.188 [pool-2-thread-4] INFO  ClientHandler - Processing operation: GET_ALL
+2026-04-24 17:32:13.399 [main] INFO  Main - Server is starting...
+2026-04-24 17:32:13.514 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-04-24 17:32:13.517 [main] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-04-24 17:32:13.518 [main] INFO  Main - Data auto-loaded from data.bin
+2026-04-24 17:32:13.527 [main] INFO  Main - Server is listening on port 6666
+2026-04-24 17:41:51.349 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-04-24 17:41:51.350 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-04-24 17:41:51.373 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-04-24 17:46:17.298 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-04-24 17:46:17.298 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-04-24 17:46:17.300 [pool-2-thread-2] INFO  ClientHandler - Processing operation: ADD_EMPLOYEE
+2026-04-24 17:46:17.331 [pool-2-thread-2] INFO  EmployeeManager - Employee added: name (Role: Developer)
+2026-04-24 17:46:17.332 [pool-2-thread-2] INFO  EmployeeManager - Data saved to data.bin
+2026-04-24 17:46:17.333 [pool-2-thread-2] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-04-24 17:46:17.453 [pool-2-thread-2] INFO  Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-04-24 17:46:17.722 [pool-2-thread-2] INFO  HibernateUtil - Database password successfully loaded from .env file.
+2026-04-24 17:46:17.757 [pool-2-thread-2] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-24 17:46:17.880 [pool-2-thread-2] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-04-24 17:46:17.884 [pool-2-thread-2] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2026-04-24 17:46:17.884 [pool-2-thread-2] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/it_company_db]
+2026-04-24 17:46:17.885 [pool-2-thread-2] INFO  pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2026-04-24 17:46:17.885 [pool-2-thread-2] INFO  pooling - HHH10001003: Autocommit mode: false
+2026-04-24 17:46:17.888 [pool-2-thread-2] INFO  pooling - HHH10001115: Connection pool size: 10 (min=1)
+2026-04-24 17:46:18.192 [pool-2-thread-2] WARN  deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-24 17:46:19.076 [pool-2-thread-2] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-24 17:46:19.095 [pool-2-thread-2] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2379675b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-05-08 16:06:22.317 [main] INFO  Main - Server is starting...
+2026-05-08 16:06:22.428 [main] INFO  EmployeeManager - Data loaded from data.bin
+2026-05-08 16:06:22.432 [main] INFO  EmployeeManager - Data successfully written to: E:\removal\java_projects\lab_2_progNA\data.bin
+2026-05-08 16:06:22.432 [main] INFO  Main - Data auto-loaded from data.bin
+2026-05-08 16:06:22.438 [main] INFO  Main - Server is listening on port 6666
+2026-05-08 16:06:38.878 [pool-2-thread-1] INFO  ClientHandler - Start working thread: pool-2-thread-1
+2026-05-08 16:06:38.878 [pool-2-thread-1] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-05-08 16:06:38.906 [pool-2-thread-1] INFO  ClientHandler - Processing operation: GET_ALL
+2026-05-08 16:06:55.503 [pool-2-thread-2] INFO  ClientHandler - Start working thread: pool-2-thread-2
+2026-05-08 16:06:55.503 [pool-2-thread-2] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-05-08 16:06:55.505 [pool-2-thread-2] INFO  ClientHandler - Processing operation: SEARCH_BY_SKILLS
+2026-05-08 16:07:04.860 [pool-2-thread-3] INFO  ClientHandler - Start working thread: pool-2-thread-3
+2026-05-08 16:07:04.860 [pool-2-thread-3] INFO  ClientHandler - Accepted connection from /127.0.0.1
+2026-05-08 16:07:04.862 [pool-2-thread-3] INFO  ClientHandler - Processing operation: SEARCH_BY_NAME

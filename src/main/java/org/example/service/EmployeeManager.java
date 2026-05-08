@@ -26,9 +26,17 @@ public class EmployeeManager {
         salaryMap.put(parseInt(e.getId()), e.getSalary());
         projectMap.put(parseInt(e.getId()), e.getCurrentProject());
         log.info("Employee added: {} (Role: {})", e.getName(), e.getRole());
+
+        try {
+            saveToFile();
+            saveToDatabase();
+            employeeRepository.save(Collections.singletonList(e));
+        } catch (IOException ex) {
+            log.error("Failed to auto-save after adding employee: {}", ex.getMessage());
+        }
     }
 
-    public synchronized List<Employee> getAll() { return new ArrayList<>(employees); }
+    public synchronized List<Employee> getAll() { return new ArrayList<>(employees).stream().sorted().toList(); }
 
 
     public synchronized List<Employee> searchByName(String name) {
@@ -130,6 +138,7 @@ public class EmployeeManager {
                     e.assignProject(newProject);
                     try {
                         saveToDatabase();
+                        employeeRepository.save(Collections.singletonList(e));
                         saveToFile();
                     } catch (IOException ex) {
                         log.error("Failed to save project: {}", ex.getMessage());
@@ -155,9 +164,14 @@ public class EmployeeManager {
     }
 
     public void saveToDatabase() throws IOException {
-        try{
-            employeeRepository.save(employees);
-            log.info("Data successfully synchronized with PostgreSQL database.");
+        File file = new File(DATA_FILE);
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
+            oos.writeObject(projectMap);
+            oos.writeObject(salaryMap);
+            oos.writeObject(employees);
+            oos.writeObject(transfersBetweenProjects);
+            oos.flush(); // Принудительно выталкиваем данные в файл
+            log.info("Data successfully written to: {}", file.getAbsolutePath());
         }
         catch (Exception e) {
             log.error("Error while saving data to DataBase: ", e);

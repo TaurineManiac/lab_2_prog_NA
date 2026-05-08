@@ -29,4 +29,12 @@ public class Developer extends Employee {
 
         this.salary = 2000 + (getExperience() * 150);
     }
+
+    @Override
+    protected int compareSubclassDetails(Employee other) {
+        Developer dev = (Developer) other;
+        return this.techStack.compareTo(dev.techStack);
+    }
+
+
 }

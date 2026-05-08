@@ -29,4 +29,12 @@ public class Manager extends Employee {
 
         this.salary = 3000 + (teamSize * 50);
     }
+
+    @Override
+    protected int compareSubclassDetails(Employee other) {
+        Manager mgr = (Manager) other;
+        return Integer.compare(this.teamSize, mgr.teamSize);
+    }
+
+
 }

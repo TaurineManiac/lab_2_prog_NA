@@ -29,4 +29,10 @@ public class Tester extends Employee {
 
         this.salary = 1200 + (getExperience() * 100);
     }
+
+    @Override
+    protected int compareSubclassDetails(Employee other) {
+        Tester tst = (Tester) other;
+        return this.testType.compareTo(tst.testType);
+    }
 }

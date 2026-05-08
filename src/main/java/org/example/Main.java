@@ -1,23 +1,14 @@
 package org.example;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.log4j.Log4j2;
-import org.example.model.Employee;
-import org.example.model.Operations;
-import org.example.model.request.Request;
-import org.example.model.response.Response;
 import org.example.network.ClientHandler;
 import org.example.repository.impl.EmployeeRepositoryImpl;
 import org.example.service.EmployeeManager;
 
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

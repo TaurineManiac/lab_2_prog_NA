@@ -29,7 +29,7 @@ import lombok.*;
 @Table(name = "employees")        // 2. Specifies the table name in PostgreSQL
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) // 3. Puts all subclasses in ONE table
 @DiscriminatorColumn(name = "emp_type")
-public abstract class Employee implements Payable, ProjectAssignable, java.io.Serializable {
+public abstract class Employee implements Payable, ProjectAssignable, java.io.Serializable, Comparable<Employee> {
     @Id
     private String id;
     private String name;
@@ -49,5 +49,23 @@ public abstract class Employee implements Payable, ProjectAssignable, java.io.Se
     public String toString() {
         return String.format("[%s] ID: %s | Name: %s | Exp: %d yrs | Project: %s | Salary: %.2f$",
                 getRole(), getId(), getName(), getExperience(), getCurrentProject(), salary);
+    }
+
+    @Override
+    public int compareTo(Employee other) {
+
+        int roleCompare = this.getClass().getSimpleName()
+                .compareTo(other.getClass().getSimpleName());
+
+
+        if (roleCompare == 0) {
+            return this.name.compareTo(other.name);
+        }
+
+        return roleCompare;
+    }
+
+    protected int compareSubclassDetails(Employee other) {
+        return 0;
     }
 }
